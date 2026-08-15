@@ -1,0 +1,42 @@
+{
+  "name": "dsh-desktop-lifecycle",
+  "version": "0.1.0",
+  "description": "Close and restart controls for DeepSeek Harness Desktop and Web on Windows",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "lifecycle",
+    "desktop",
+    "web"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**",
+    "cordis.patch.yml",
+    "launch-helper.ps1",
+    "lifecycle-helper.ps1"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-ui-settings-general"
+      ],
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
