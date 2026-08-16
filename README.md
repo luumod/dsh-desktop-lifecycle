@@ -1,4 +1,4 @@
-# dsh-desktop-lifecycle
+# dsh-desktop-lifecycle ![awesome · DSH plugin](https://awesome-dsh-plugin.com/badge.svg)
 
 为 Windows 上的 DeepSeek Harness Desktop 与 Web 提供“关闭程序”和“重启程序”控制项。控件位于“设置 → 通用设置”底部。
 
